@@ -1,38 +1,221 @@
-.App {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('./bg01.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+.maincontent {
+  flex: 1;
+  padding-top: 100px; 
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.textContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; 
+  font-family: "Times New Roman", Times, serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.homeImage {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 20px auto;
+  display: block;
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.contactImage {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 20px auto;
+  display: block;
+  object-fit: cover;
+}
+.biotext {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+  margin-right: 300px;
+  margin-left: 300px;
+
+}
+
+.heading{
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: normal;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-right: 300px;
+  margin-left: 300px;
+
+}
+.sectionReading {
+  
+  text-align: left;
+  color: rgb(12, 24, 24);
+  font-size: 1.8rem;
+  font-weight: normal;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 300px;
+}
+.contactHead{
+  
+  text-align: center;
+  color: rgb(12, 24, 24);
+  font-size: 1.8rem;
+  font-weight: normal;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 60px;
+  margin-top: 15px;
+  margin-left: 100px;
+
+}
+
+.itemBlock {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.itemBlock2 {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+.divider {
+  border: none;
+  border-top: 1px solid #000000;
+  margin: 40px 0;
+}
+
+.contactflex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.contactDetails {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       
+  padding: 5px 40px;             
+  background-color: rgb(152, 218, 240);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 50px;                  
+}
+
+.logo h1 {
+    font-size: 1.5rem;      
+    font-weight: 700;
+  margin: 0;     
+  color: #892c2c;
+}
+
+.linksContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #42404d;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+
+.navLink:hover {
+  color: #8e2626;
+  transform: translateY(-2px);
+}
+
+.navlink button.active{
+  background-color: #000000;
+  color:#f7f4f4f4;
+  font-weight: bold;
+
+}
+
+.navLink.underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8e2626;
+}
+
+/* Footer Styling */
+.footer-links a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: opacity 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }

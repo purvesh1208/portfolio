@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
 
 function App() {
+  const [currentTab, setCurrentTab] = useState('Home');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="appWrapper">
+      <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
+      <main className="mainContent">
+        <MainContent currentTab={currentTab} />
+      </main>
+      <Footer />
     </div>
   );
 }
 
+const globalBackground = {
+    backgroundImage: `linear-gradient(rgba(252, 252, 252, 0.93), rgba(252, 252, 252, 0.93)), url('./bg01.jpg')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed'
+  };
+
+  
 export default App;
