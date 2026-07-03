@@ -1,221 +1,231 @@
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url('./bg01.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #333333;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
 
 .maincontent {
-  flex: 1;
-  padding-top: 100px; 
+    flex: 1;
+    padding-top: 140px; 
+    padding-bottom: 80px;
+    min-height: 85vh;
+    background: linear-gradient(-45deg, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb, #ffbebc);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 35px;
+    text-align: center;
+    background: rgba(247, 246, 246, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .textContainer {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center; 
-  font-family: "Times New Roman", Times, serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    line-height: 1.7;
+    color: #2d3748;
 }
-
-
 
 .homeImage {
-  max-width: 250px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin: 0 auto 20px auto;
-  display: block;
-  object-fit: cover;
+    max-width: 220px;
+    width: 100%;
+    height: 220px;
+    margin: 0 auto 25px auto;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border: 5px solid #ffffff;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.homeImage:hover {
+    transform: scale(1.06) rotate(2deg);
+}
 
 .contactImage {
-  max-width: 250px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin: 0 auto 20px auto;
-  display: block;
-  object-fit: cover;
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 14px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
+h1, h2, h3 {
+    color: #1a202c;
+    font-weight: 700;
+}
+
+.textContainer h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #1a202c;
+}
+
 .biotext {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-align: center;
-  color: #333;
-  margin-right: 300px;
-  margin-left: 300px;
-
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-top: 15px;
 }
 
-.heading{
-  text-align: left;
-  font-size: 1.8rem;
-  font-weight: normal;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  margin-right: 300px;
-  margin-left: 300px;
-
-}
-.sectionReading {
-  
-  text-align: left;
-  color: rgb(12, 24, 24);
-  font-size: 1.8rem;
-  font-weight: normal;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  margin-left: 100px;
-  margin-right: 300px;
-}
-.contactHead{
-  
-  text-align: center;
-  color: rgb(12, 24, 24);
-  font-size: 1.8rem;
-  font-weight: normal;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-  margin-bottom: 60px;
-  margin-top: 15px;
-  margin-left: 100px;
-
+.heading {
+    text-align: left;
+    font-size: 1.4rem;
+    color: #ff5f6e; 
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(255, 95, 110, 0.15);
 }
 
-.itemBlock {
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  margin-left: 300px;
-  margin-right: 300px;
-}
-.itemBlock2 {
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  margin-left: 100px;
-  margin-right: 100px;
+.sectionHeading {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #2d3748;
 }
 
+.itemBlock, .itemBlock2 {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 4px solid #ff5f6e;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.itemBlock:hover, .itemBlock2:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(4px);
+}
 
 .divider {
-  border: none;
-  border-top: 1px solid #000000;
-  margin: 40px 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
+    margin: 40px 0;
+    border: none;
 }
 
-.contactflex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  margin-top: 20px;
-  text-align: left;
-}
-
-.contactDetails {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
 
 .navContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;       
-  padding: 5px 40px;             
-  background-color: rgb(152, 218, 240);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  height: 50px;                  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .logo h1 {
-    font-size: 1.5rem;      
-    font-weight: 700;
-  margin: 0;     
-  color: #892c2c;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #ff5f6e;
+    margin: 0;
 }
 
 .linksContainer {
-  display: flex;
-  gap: 2rem;
+    display: flex;
+    gap: 15px;
 }
 
 .navLink {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #42404d;
-  cursor: pointer;
-  padding: 5px 10px;
-  transition: color 0.3s ease, transform 0.2s ease;
-  position: relative;
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
-
 
 .navLink:hover {
-  color: #8e2626;
-  transform: translateY(-2px);
+    color: #ff5f6e;
+    background: rgba(255, 95, 110, 0.1);
 }
 
-.navlink button.active{
-  background-color: #000000;
-  color:#f7f4f4f4;
-  font-weight: bold;
-
+.navLink.active {
+    background: #ff5f6e;
+    color: #ffffff !important;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 95, 110, 0.3);
 }
 
-.navLink.underline::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #8e2626;
+.contactFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-/* Footer Styling */
+.contactDetails {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.contactDetails a {
+    color: #ff5f6e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contactDetails a:hover {
+    text-decoration: underline;
+}
+
+
 .footer-links a {
-  color: #000000;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: opacity 0.3s ease, text-decoration 0.3s ease;
+    display: inline-block;
+    margin: 0 18px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .footer-links a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
+    transform: translateY(-6px) scale(1.18);
 }
